@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "xengine",
+	"version": "${version}",
+	"name": "XEngine",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/xengine/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.emm233.XEngine"
+		],
+		"client": [
+			"com.emm233.client.XEngineClient"
+		],
+		"fabric-datagen": [
+			"com.emm233.client.XEngineDataGenerator"
+		]
+	},
+	"mixins": [
+		"xengine.mixins.json",
+		{
+			"config": "xengine.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
